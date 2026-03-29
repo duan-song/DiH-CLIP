@@ -15,7 +15,7 @@ from mmseg.registry import MODELS
 from pamr import PAMR
 
 @MODELS.register_module()
-class SCCLIPForSegmentation(BaseSegmentor):
+class CLIPForSegmentation(BaseSegmentor):
     def __init__(self, clip_path, name_path, device=torch.device('cuda'),
                     pamr_steps=0, pamr_stride=(8, 16), prob_thd=0.0, logit_scale=40, 
                     slide_stride=112, slide_crop=224, area_thd=None, 
