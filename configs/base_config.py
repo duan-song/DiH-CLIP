@@ -1,6 +1,6 @@
 # for ViT-B/16
 model = dict(
-    type='SCCLIPForSegmentation',
+    type='CLIPForSegmentation',
     clip_path='ViT-B/16',
     pre_adjust_idx=8,
     post_adjust_idx=3,
@@ -11,7 +11,7 @@ model = dict(
 
 # for ViT-L/14
 #model = dict(
-#     type='SCCLIPForSegmentation',
+#     type='CLIPForSegmentation',
 #     clip_path='ViT-L/14',
 #     pre_adjust_idx=16,
 #     post_adjust_idx=6,
