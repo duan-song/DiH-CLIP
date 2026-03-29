@@ -22,29 +22,16 @@ test_pipeline = [
     dict(type='PackSegInputs')
 ]
 
-test_dataloader = dict(
-    batch_size=1,
-    num_workers=4,
-    persistent_workers=True,
-    sampler=dict(type='DefaultSampler', shuffle=False),
-    dataset=dict(
-        type=dataset_type,
-        data_root=data_root,
-        reduce_zero_label=False,
-        data_prefix=dict(
-            img_path='/data/dss/dataset/OVSS/coco_stuff164k/images/val2017',
-            seg_map_path='/data/dss/dataset/OVSS/coco_stuff164k/annotations/val2017'),
-        pipeline=test_pipeline))
 
-#test_dataloader = dict(
-#    batch_size=1,
-#    num_workers=4,
-#    persistent_workers=True,
-#    sampler=dict(type='DefaultSampler', shuffle=False),
-#    dataset=dict(
-#        type=dataset_type,
-#        data_root=data_root,
-#        reduce_zero_label=False,
-#        data_prefix=dict(
-#            img_path='images/val2017', seg_map_path='annotations/val2017'),
-#        pipeline=test_pipeline))
+test_dataloader = dict(
+   batch_size=1,
+   num_workers=4,
+   persistent_workers=True,
+   sampler=dict(type='DefaultSampler', shuffle=False),
+   dataset=dict(
+       type=dataset_type,
+       data_root=data_root,
+       reduce_zero_label=False,
+       data_prefix=dict(
+           img_path='images/val2017', seg_map_path='annotations/val2017'),
+       pipeline=test_pipeline))
